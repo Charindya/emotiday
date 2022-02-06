@@ -1,22 +1,26 @@
+import { AnyCnameRecord } from 'dns';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import styled from 'styled-components';
- 
-const dispatchEmotion = () => {
-    
-}
+import { useSelector, useDispatch } from 'react-redux';
+import { allReducerType } from '../../reducers/reducers';
 
-export const EmotionSelector: React.FC= () => {
+
+export const EmotionSelector: React.FC<any>= (props: {emotionLevel: string}) => {
+const primaryEmotion = useSelector((state: allReducerType) => state.emotion);
+const dispatch = useDispatch();
+
     const emotions:Array<string> = ['Angry', 'Sad', 'Neutral', 'Happy', 'Ecstatic'];
-    console.log(emotions.length)
     return (
         <>
-        <h1>Emotion Selector</h1>
+        <h2>{props.emotionLevel} Emotion Selector</h2>
                 {
                     emotions.map((emotion, i) => {
-                        return <button key={i} type="button" className="btn btn-primary" onClick={dispatchEmotion}>{emotion}</button>
+                        return <button key={i} type="button" className="btn btn-primary" onClick={() => dispatch({
+                            type: emotion.toUpperCase()
+                        })}>{emotion}</button>
                     })
                 }
+            <p>{primaryEmotion}</p>
+            
         </>
         // <EmotionDisplayer/>
     )
