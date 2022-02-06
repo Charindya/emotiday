@@ -1,3 +1,4 @@
+//these came with the create project cmd line -- will not be using them
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import type { RootState, AppDispatch } from './store';
 

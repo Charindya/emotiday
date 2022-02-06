@@ -1,3 +1,14 @@
+I want to create an app where users can record their primary, secondary and tertiary emotions for each day.
+
+There should be an initial page that displays the date and a button called start.
+
+On the emotional entry page, the user should be able to select an emotion from a dropdown and the percentage of that emotion they were feeling throughout the day. They should also be able to enter the highlights of the day in a list view.
+
+On the records page, the user should be able to view their emotive response on a daily, weekly and monthly basis.
+
+They should not be able to go back to a previous record and edit their responses after the day has passed.
+
+###################################################################################################
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
